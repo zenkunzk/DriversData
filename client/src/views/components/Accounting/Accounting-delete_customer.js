@@ -24,7 +24,7 @@ const AccountingDelete_Customer = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v12/data/${id}`);
+      const response = await DriverFinder.get(`/api/v12/data/${id}`);
       console.log(response.data.data);
       setDatecreated(response.data.data.accounting.datecreated);
       setFirstname(response.data.data.accounting.firstname);
@@ -44,7 +44,7 @@ const AccountingDelete_Customer = () => {
   const { accountings, setAccountings } = useContext(DriversContext);
   const deleteData = async (e, id) => {
     try {
-      const response = await DriverFinder.delete(`http://localhost:3001/api/v12/data/${id}`);
+      const response = await DriverFinder.delete(`/api/v12/data/${id}`);
       setAccountings(
         accountings.filter(() => {
           return id;
