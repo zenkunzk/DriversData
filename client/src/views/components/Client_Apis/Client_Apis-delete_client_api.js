@@ -16,7 +16,7 @@ const Client_ApisDelete_Client_Api = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v14/data/${id}`);
+      const response = await DriverFinder.get(`/api/v14/data/${id}`);
       console.log(response.data.data);
       setEmail(response.data.data.clientapi.email);
       setApikey(response.data.data.clientapi.apikey);
@@ -29,7 +29,7 @@ const Client_ApisDelete_Client_Api = () => {
   const { clientapis, setClientapis } = useContext(DriversContext);
   const deleteData = async (e, id) => {
     try {
-      const response = await DriverFinder.delete(`http://localhost:3001/api/v14/data/${id}`);
+      const response = await DriverFinder.delete(`/api/v14/data/${id}`);
       setClientapis(
         clientapis.filter(() => {
           return id;
