@@ -33,7 +33,7 @@ const Register = ({setAuth}) => {
     try {
       const body = { email, password, name };
       const response = await fetch(
-        "http://localhost:3001/auth/register",
+        "/auth/register",
         {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ const Register = ({setAuth}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v5/data");
+        const response = await DriverFinder.get("/api/v5/data");
         console.log(response.data.data);
         setUsers(response.data.data.users);
       } catch (err) {}
