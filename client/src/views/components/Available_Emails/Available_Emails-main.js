@@ -129,7 +129,7 @@ const Available_EmailsMain = () => {
         tomtomapis,
       });
       console.log(response.data.data);
-      window.location.reload()
+      toast.success(`Successfully Added ID ${response.data.data.driversdataemail.id}!`);
       addDriversDataEmails(response.data.data.driversdataemail);
     } catch (err) {
       console.log(err);
