@@ -24,7 +24,7 @@ const Company_InfoMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v4/data");
+        const response = await DriverFinder.get("/api/v4/data");
         console.log(response.data.data);
         setDriversinfos(response.data.data.driversinfos);
       } catch (err) {}
@@ -139,7 +139,7 @@ const Company_InfoMain = () => {
   const [dated, setDated ] = useState(`${current1.getMonth()+1}/${current1.getDate()}/${current1.getFullYear()}`);
   const handleSubmit = async () => {
     try {
-      const response = await DriverFinder.post("http://localhost:3001/api/v4/data", {
+      const response = await DriverFinder.post("/api/v4/data", {
         firstname,
         lastname,
         address,
