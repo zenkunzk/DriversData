@@ -27,7 +27,7 @@ const Company_InfoEdit = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v4/data/${id}`);
+      const response = await DriverFinder.get(`/api/v4/data/${id}`);
       console.log(response.data.data);
       setFirstname(response.data.data.driversinfo.firstname);
       setLastname(response.data.data.driversinfo.lastname);
@@ -51,7 +51,7 @@ const Company_InfoEdit = () => {
   }, [id]);
 
   const handleSubmit = async () => {
-    const updatedDriver = await DriverFinder.put(`http://localhost:3001/api/v4/data/${id}`, {
+    const updatedDriver = await DriverFinder.put(`/api/v4/data/${id}`, {
       firstname,
       lastname,
       address,
