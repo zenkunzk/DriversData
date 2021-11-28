@@ -5,7 +5,7 @@ const FooterUserName = () => {
 
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:3001/dashboard/", {
+      const res = await fetch("/dashboard/", {
         method: "POST",
         headers: { 'Authorization': `token ${localStorage.token}` }
       });
