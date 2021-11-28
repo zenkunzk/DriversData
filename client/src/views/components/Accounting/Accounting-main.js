@@ -89,7 +89,7 @@ const AccountingMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v12/data");
+        const response = await DriverFinder.get("/api/v12/data");
         console.log(response.data.data);
         setAccountings(response.data.data.accountings);
       } catch (err) {}
@@ -115,7 +115,7 @@ const AccountingMain = () => {
   const [total, setTotal ] = useState("");
   const handleSubmit = async () => {
     try {
-      const response = await DriverFinder.post("http://localhost:3001/api/v12/data", {
+      const response = await DriverFinder.post("/api/v12/data", {
         datecreated,
         firstname,
         lastname,
