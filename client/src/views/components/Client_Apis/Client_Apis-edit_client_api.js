@@ -15,7 +15,7 @@ const Client_ApisEdit_Client_Api = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v14/data/${id}`);
+      const response = await DriverFinder.get(`/api/v14/data/${id}`);
       console.log(response.data.data);
       setEmail(response.data.data.clientapi.email);
       setApikey(response.data.data.clientapi.apikey);
@@ -27,7 +27,7 @@ const Client_ApisEdit_Client_Api = () => {
   }, [id]);
 
   const handleSubmit = async () => {
-    const updatedDriver = await DriverFinder.put(`http://localhost:3001/api/v14/data/${id}`, {
+    const updatedDriver = await DriverFinder.put(`/api/v14/data/${id}`, {
       email,
       apikey,
       company,
