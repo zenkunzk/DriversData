@@ -10,7 +10,7 @@ const PaymentrecordMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v13/data");
+        const response = await DriverFinder.get("/api/v13/data");
         console.log(response.data.data);
         setPaymentrecords(response.data.data.paymentrecords);
       } catch (err) {}
@@ -24,7 +24,7 @@ const PaymentrecordMain = () => {
   const [searchTerm2, setSearchTerm2] = useState("")
   const deleteData = async (e, id) => {
     try {
-      const response = await DriverFinder.delete(`http://localhost:3001/api/v13/data/${id}`);
+      const response = await DriverFinder.delete(`/api/v13/data/${id}`);
       setPaymentrecords(
         paymentrecords.filter(() => {
           return id;
