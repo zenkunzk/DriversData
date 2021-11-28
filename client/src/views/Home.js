@@ -94,7 +94,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v14/data");
+        const response = await DriverFinder.get("/api/v14/data");
         console.log(response.data.data);
         setClientapis(response.data.data.clientapis);
       } catch (err) {}
@@ -107,7 +107,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v5/data");
+        const response = await DriverFinder.get("/api/v5/data");
         console.log(response.data.data);
         setUsers(response.data.data.users);
       } catch (err) {}
@@ -120,7 +120,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v3/data");
+        const response = await DriverFinder.get("/api/v3/data");
         console.log(response.data.data);
         setDriversdataemails(response.data.data.driversdataemails);
       } catch (err) {}
@@ -133,7 +133,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v4/data");
+        const response = await DriverFinder.get("/api/v4/data");
         console.log(response.data.data);
         setDriversinfos(response.data.data.driversinfos);
       } catch (err) {}
@@ -146,7 +146,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v12/data");
+        const response = await DriverFinder.get("/api/v12/data");
         console.log(response.data.data);
         setAccountings(response.data.data.accountings);
       } catch (err) {}
@@ -159,7 +159,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v11/data");
+        const response = await DriverFinder.get("/api/v11/data");
         console.log(response.data.data);
         setCalendars(response.data.data.calendars);
       } catch (err) {}
