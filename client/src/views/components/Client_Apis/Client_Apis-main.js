@@ -25,7 +25,7 @@ const Client_ApisMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v14/data");
+        const response = await DriverFinder.get("/api/v14/data");
         console.log(response.data.data);
         setClientapis(response.data.data.clientapis);
       } catch (err) {}
@@ -120,7 +120,7 @@ const Client_ApisMain = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await DriverFinder.post("http://localhost:3001/api/v14/data", {
+      const response = await DriverFinder.post("/api/v14/data", {
         email,
         apikey,
         company,
