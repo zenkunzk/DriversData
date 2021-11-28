@@ -15,7 +15,7 @@ const Available_EmailsEdit_data = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v3/data/${id}`);
+      const response = await DriverFinder.get(`/api/v3/data/${id}`);
       console.log(response.data.data);
       setAemail(response.data.data.driversdataemail.aemail);
       setHereapis(response.data.data.driversdataemail.hereapis);
@@ -27,7 +27,7 @@ const Available_EmailsEdit_data = () => {
   }, [id]);
 
   const handleSubmit = async () => {
-    const updatedDriver = await DriverFinder.put(`http://localhost:3001/api/v3/data/${id}`, {
+    const updatedDriver = await DriverFinder.put(`/api/v3/data/${id}`, {
       aemail,
       hereapis,
       mapboxapis,
