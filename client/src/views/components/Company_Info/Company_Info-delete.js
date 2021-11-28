@@ -28,7 +28,7 @@ const Company_InfoDelete = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v4/data/${id}`);
+      const response = await DriverFinder.get(`/api/v4/data/${id}`);
       console.log(response.data.data);
       setFirstname(response.data.data.driversinfo.firstname);
       setLastname(response.data.data.driversinfo.lastname);
@@ -53,7 +53,7 @@ const Company_InfoDelete = () => {
   const { driversinfos, setDriversinfos } = useContext(DriversContext);
   const deleteData = async (e, id) => {
     try {
-      const response = await DriverFinder.delete(`http://localhost:3001/api/v4/data/${id}`);
+      const response = await DriverFinder.delete(`/api/v4/data/${id}`);
       setDriversinfos(
         driversinfos.filter(() => {
           return id;
