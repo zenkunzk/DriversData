@@ -1,0 +1,165 @@
+@font-face {
+    font-display: swap;
+}
+.customCSS_table-hover:hover {
+    background: rgba(0,0,0,0.22);
+}
+.hovertoSection {
+    transition: .2s all ease-in-out;
+}
+.hovertoSection:hover {
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.5rem 0.7rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 2px solid #dae1e7;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    transition: .4s all ease-in-out;
+}
+
+.edit_boxCSS {
+    border-right: 2px solid #52585e;
+    border-left: 2px solid #52585e;
+}
+
+.edit_iconCSS {
+    color: #00f2c3;
+    font-size: 25px;
+    cursor: pointer;
+}
+.edit_iconCSS:hover {
+    color: white;
+}
+
+.delete_iconCSS {
+    color: #f81f01;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.delete_iconCSS:hover {
+    color: white;
+}
+
+.refresh_hover:hover {
+    color: grey
+}
+.border_companyUse2 {
+    border-left: 2px solid #52585e;
+    border-right: 2px solid #52585e;
+}
+
+.border_companyUse {
+    border-left: 2px solid #52585e;
+    border-right: 2px solid #52585e;
+}
+.border_payments {
+    border-left: 2px solid #52585e;
+    border-right: 2px solid #52585e;
+}
+.border_payments:hover {
+    border: 2px solid gold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.remove_hover:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
+.border_companyUse:hover {
+    border-left: 2px solid gold;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+    border-right: 2px solid gold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.copy_btnCSS {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+.data-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy_btnCSS:hover {
+    cursor: pointer;
+    color: lightgrey;
+}
+
+::-webkit-scrollbar{
+    width: 7.5px;
+    transform: translateX(-1000%);
+    transition: .3s all ease-in-out;
+}
+
+::-webkit-scrollbar:hover {
+    width: 10px;
+    transition: .3s all ease-in-out;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e2b;
+    transition: .3s all ease-in-out;
+}
+::-webkit-scrollbar-track:hover {
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    transition: .3s all ease-in-out;
+    border-radius: 1000px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkgrey;
+}
+
+.loading {
+    animation: loading 1s infinite linear;
+}
+.e_day {
+    background: #344675
+}
+.e_day:hover {
+    cursor: pointer;
+    background: #2c3259
+}
+
+.iconreportshover {
+    font-size: 25px;
+    transition: .1s all ease-in-out;
+}
+
+.iconreportshover:hover {
+    color: grey
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
