@@ -25,7 +25,7 @@ const AccountingEdit_payment = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v12/data/${id}`);
+      const response = await DriverFinder.get(`/api/v12/data/${id}`);
       console.log(response.data.data);
       setDatecreated(response.data.data.accounting.datecreated);
       setFirstname(response.data.data.accounting.firstname);
@@ -44,7 +44,7 @@ const AccountingEdit_payment = () => {
   }, [id]);
 
   const handleSubmit = async () => {
-    const updatedDriver = await DriverFinder.put(`http://localhost:3001/api/v12/data/${id}`, {
+    const updatedDriver = await DriverFinder.put(`/api/v12/data/${id}`, {
       datecreated,
       firstname,
       lastname,
@@ -62,7 +62,7 @@ const AccountingEdit_payment = () => {
   };
   const handleSubmit2 = async () => {
     try {
-      const response = await DriverFinder.post("http://localhost:3001/api/v13/data", {
+      const response = await DriverFinder.post("/api/v13/data", {
         dateset,
         firstname,
         lastname,
