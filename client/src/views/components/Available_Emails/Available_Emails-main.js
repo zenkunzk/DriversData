@@ -25,7 +25,7 @@ const Available_EmailsMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v3/data");
+        const response = await DriverFinder.get("/api/v3/data");
         console.log(response.data.data);
         setDriversdataemails(response.data.data.driversdataemails);
       } catch (err) {}
@@ -122,7 +122,7 @@ const Available_EmailsMain = () => {
   const [tomtomapis, setTomtomapis] = useState("");
   const handleSubmit = async () => {
     try {
-      const response = await DriverFinder.post("http://localhost:3001/api/v3/data", {
+      const response = await DriverFinder.post("/api/v3/data", {
         aemail,
         hereapis,
         mapboxapis,
