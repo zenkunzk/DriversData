@@ -17,7 +17,7 @@ const Available_EmailsDelete_data = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v3/data/${id}`);
+      const response = await DriverFinder.get(`/api/v3/data/${id}`);
       console.log(response.data.data);
       setAemail(response.data.data.driversdataemail.aemail);
       setHereapis(response.data.data.driversdataemail.hereapis);
@@ -29,7 +29,7 @@ const Available_EmailsDelete_data = () => {
   }, [id]);
   const deleteData = async (e, id) => {
     try {
-      const response = await DriverFinder.delete(`http://localhost:3001/api/v3/data/${id}`);
+      const response = await DriverFinder.delete(`/api/v3/data/${id}`);
       setDriversdataemails(
         driversdataemails.filter(() => {
           return id;
