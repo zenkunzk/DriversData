@@ -20,7 +20,7 @@ const Api_CalendarEdit_day = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v11/data/${id}`);
+      const response = await DriverFinder.get(`/api/v11/data/${id}`);
       console.log(response.data.data);
       setDaynumber(response.data.data.calendar.daynumber);
       setEmail(response.data.data.calendar.email);
@@ -37,7 +37,7 @@ const Api_CalendarEdit_day = () => {
   }, [id]);
 
   const handleSubmit = async () => {
-    const updatedDriver = await DriverFinder.put(`http://localhost:3001/api/v11/data/${id}`, {
+    const updatedDriver = await DriverFinder.put(`/api/v11/data/${id}`, {
       daynumber,
       email,
       api,
