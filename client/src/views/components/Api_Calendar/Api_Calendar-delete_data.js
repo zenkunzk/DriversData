@@ -22,7 +22,7 @@ const Api_CalendarDelete_data = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await DriverFinder.get(`http://localhost:3001/api/v11/data/${id}`);
+      const response = await DriverFinder.get(`/api/v11/data/${id}`);
       console.log(response.data.data);
       setDaynumber(response.data.data.calendar.daynumber);
       setEmail(response.data.data.calendar.email);
@@ -40,7 +40,7 @@ const Api_CalendarDelete_data = () => {
   const { calendars, setCalendars } = useContext(DriversContext);
   const deleteData = async (e, id) => {
     try {
-      const response = await DriverFinder.delete(`http://localhost:3001/api/v11/data/${id}`);
+      const response = await DriverFinder.delete(`/api/v11/data/${id}`);
       setCalendars(
         calendars.filter(() => {
           return id;
