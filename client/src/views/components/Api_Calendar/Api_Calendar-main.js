@@ -25,7 +25,7 @@ const Api_CalendarMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await DriverFinder.get("http://localhost:3001/api/v11/data");
+        const response = await DriverFinder.get("/api/v11/data");
         console.log(response.data.data);
         setCalendars(response.data.data.calendars);
       } catch (err) {}
@@ -138,7 +138,7 @@ const Api_CalendarMain = () => {
   const [inusetwo, setInusetwo ] = useState("");
   const handleSubmit = async () => {
     try {
-      const response = await DriverFinder.post("http://localhost:3001/api/v11/data", {
+      const response = await DriverFinder.post("/api/v11/data", {
         daynumber,
         email,
         api,
